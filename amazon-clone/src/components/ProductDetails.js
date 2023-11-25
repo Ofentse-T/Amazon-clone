@@ -6,7 +6,7 @@ export const ProductDetails = () => {
   console.log(params);
   return (
     <div>
-      <h1>Product details</h1>
+      <h1>Product Details</h1>
       <p>{params.id}</p>
     </div>
   );

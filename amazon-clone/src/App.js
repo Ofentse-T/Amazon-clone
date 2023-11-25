@@ -3,7 +3,6 @@ import Home from "./components/Home";
 import { ProductDetails } from "./components/ProductDetails";
 import Products from "./components/Products";
 import Header from "./components/layout/Header";
-// import { ProductDetails } from "./components/ProductDetails";
 import { Route } from "react-router-dom";
 
 const App = () => {
