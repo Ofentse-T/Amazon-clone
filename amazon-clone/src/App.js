@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
 import ProductDetails from "./components/ProductDetails";
 import Products from "./components/Products";
@@ -10,18 +10,46 @@ const App = () => {
     <div>
       <Header />
       <main>
-        <Route path="/home">
-          <Home />
-        </Route>
-        <Route path="/products">
-          <Products />
-        </Route>
-        <Route path="/product-details/:id">
-          <ProductDetails />
-        </Route>
+        <Switch>
+          <Route path="/home">
+            <Home />
+          </Route>
+          <Route path="/products" exact>
+            <Products />
+          </Route>
+          <Route path="/products/:id">
+            <ProductDetails />
+          </Route>
+          {/* The default route that redirects to "/home" */}
+          <Redirect from="/" to="/home" />
+        </Switch>
       </main>
     </div>
   );
 };
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Header />
+//       <main>
+//         <Switch>
+//           <Route path="/" exact />
+//             <Redirect to="/home" />
+//           </Route>
+//           <Route path="/home">
+//             <Home />
+//           </Route>
+//           <Route path="/products" exact>
+//             <Products />
+//           </Route>
+//           <Route path="/products/:id">
+//             <ProductDetails />
+//           </Route>
+//         </Switch>
+//       </main>
+//     </div>
+//   );
+// };
 
 export default App;
