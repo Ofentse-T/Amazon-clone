@@ -1,13 +1,19 @@
 import "./App.css";
+import Home from "./components/Home";
+import Products from "./components/Products";
+import { Route } from "react-router-dom";
 
-import { Routes } from "react-router-dom";
-
-function App() {
+const App = () => {
   return (
     <div>
-      <h1>Amazon Clone</h1>
+      <Route path="/home">
+        <Home />
+      </Route>
+      <Route path="/products">
+        <Products />
+      </Route>
     </div>
   );
-}
+};
 
 export default App;
