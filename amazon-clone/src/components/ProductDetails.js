@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-export const ProductDetails = () => {
+const ProductDetails = () => {
   const params = useParams();
   console.log(params);
   return (
@@ -11,3 +11,5 @@ export const ProductDetails = () => {
     </div>
   );
 };
+
+export default ProductDetails;

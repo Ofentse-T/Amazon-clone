@@ -1,9 +1,9 @@
 import "./App.css";
+import { Route } from "react-router-dom";
 import Home from "./components/Home";
-import { ProductDetails } from "./components/ProductDetails";
+import ProductDetails from "./components/ProductDetails";
 import Products from "./components/Products";
 import Header from "./components/layout/Header";
-import { Route } from "react-router-dom";
 
 const App = () => {
   return (
