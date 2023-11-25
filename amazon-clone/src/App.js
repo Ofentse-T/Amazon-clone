@@ -1,17 +1,21 @@
 import "./App.css";
 import Home from "./components/Home";
 import Products from "./components/Products";
+import Header from "./components/layout/Header";
 import { Route } from "react-router-dom";
 
 const App = () => {
   return (
     <div>
-      <Route path="/home">
-        <Home />
-      </Route>
-      <Route path="/products">
-        <Products />
-      </Route>
+      <Header />
+      <main>
+        <Route path="/home">
+          <Home />
+        </Route>
+        <Route path="/products">
+          <Products />
+        </Route>
+      </main>
     </div>
   );
 };
