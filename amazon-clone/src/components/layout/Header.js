@@ -7,20 +7,25 @@ import { Link, NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <header className="header">
-      <img
-        src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
-        alt="Amazon logo"
-      />
+      <Link to="/">
+        <img
+          src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
+          alt="Amazon logo"
+        />
+      </Link>
       <div className="header_search">
         <input className="header_input" type="text">
           <SearchIcon className="search_icon" />
         </input>
       </div>
       <div className="header_nav">
-        <div className="header_option">
-          <span className="header_option1">Hello Guest</span>
-          <span className="header_option2">Sign In</span>
-        </div>
+        <Link to="LogIn">
+          <div className="header_option">
+            <span className="header_option1">Hello Guest</span>
+            <span className="header_option2">Sign In</span>
+          </div>
+        </Link>
+        <Link />
 
         <div className="header_option">
           <span className="header_option1">Returns</span>
